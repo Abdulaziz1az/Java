@@ -19,7 +19,7 @@ public class Main {
         // change major for zara
         for (Student s : student)
         {
-            if(s.name.equalsIgnoreCase("Zara"))
+            if(s.getName().equalsIgnoreCase("Zara"))
             {
                 s.changeMajor("Cs");
             }
@@ -29,7 +29,7 @@ public class Main {
         int totalAge = 0;
         for (Student s : student)
         {
-            totalAge += s.age;
+            totalAge += s.getAge();
         }
         double avgAge = (double) totalAge / student.size();
         System.out.println("Average age: " + avgAge + "\n");
@@ -38,10 +38,14 @@ public class Main {
         System.out.println("Student majring in CS:");
         for (Student s : student)
         {
-            if(s.major.equalsIgnoreCase("CS"))
+            if(s.getMajor().equalsIgnoreCase("CS"))
             {
                 s.displayInfo();
             }
         }
+
+        student.get(0).setAge(-5);
+        student.get(0).setAge(22);
+        
     }
 }
