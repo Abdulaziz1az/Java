@@ -1,4 +1,4 @@
-public class Student {
+public class Student  extends Person{
     private String name;
     private int age;
     private String major;
@@ -6,14 +6,13 @@ public class Student {
     // Constructor
     public Student(String name, int age, String major)
     {
-        this.name = name;
-        this.age = age;
-        this.major = major;
+        super(name, age);
+        this.major =  major;
     }
-    void displayInfo(){
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+    public void displayInfo(){
+        super.displayInfo();
         System.out.println("Major: " + major);
+        System.out.println();
     }
 
     // Change major method 
