@@ -10,12 +10,6 @@ public class Main {
         student.add(new Student("Zara", 21, "Bilogy"));
         student.add(new Student("Mike", 23, "Mathematics"));
 
-        // Looop and print info
-        for(Student s : student)
-        {
-            s.displayInfo();
-        }
-
         // change major for zara
         for (Student s : student)
         {
@@ -47,8 +41,27 @@ public class Main {
         student.get(0).setAge(-5);
         student.get(0).setAge(22);
         
-        for (Person p : student){
+        List<Person> people = new ArrayList<>();
+
+        people.add(new Student("Abdulaziz", 22,"CS"));
+        people.add(new Teacher("Ms. Ahmed", 35, "Math"));
+        people.add(new Student("Abdirisak", 22,"Bilogy"));
+        people.add(new Teacher("Mr. Omar", 35, "History"));
+
+        int studentCount = 0;
+        int teacherCount = 0;
+        
+        for (Person p : people){
             p.displayInfo();
+            p.printRole();
+            if (p instanceof Student)
+            {
+                studentCount++;
+            } else{
+                teacherCount++;
+            }
         }
+        System.out.println("Total Students: " + studentCount);
+        System.out.println("Total Teachers: " + teacherCount);
     }
 }

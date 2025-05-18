@@ -58,5 +58,10 @@ public class Student  extends Person{
     {
         this.major = major;
     }
+
+      public void printRole()
+    {
+        System.out.println("I am a student.");
+    }
 }
 

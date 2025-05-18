@@ -38,4 +38,9 @@ public class Person {
             System.out.println("Invalid age: ");
         }
     }
+
+    public void printRole()
+    {
+        System.out.println("I am a person.");
+    }
 }
