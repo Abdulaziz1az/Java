@@ -10,7 +10,8 @@ public class Student  extends Person{
         this.major =  major;
     }
     public void displayInfo(){
-        super.displayInfo();
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
         System.out.println("Major: " + major);
         System.out.println();
     }

@@ -1,4 +1,4 @@
-public class Person {
+public abstract class  Person {
     private String name;
     private int age;
 
@@ -8,11 +8,7 @@ public class Person {
         setAge(age);
     }
 
-    public void displayInfo()
-    {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-    }
+    public abstract void displayInfo();
 
     public String getName()
     {
@@ -39,8 +35,5 @@ public class Person {
         }
     }
 
-    public void printRole()
-    {
-        System.out.println("I am a person.");
-    }
+    public abstract void printRole();
 }
