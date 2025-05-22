@@ -1,6 +1,4 @@
-public class Student  extends Person{
-    private String name;
-    private int age;
+public class Student  extends Person implements Indentifiable, Role{
     private String major;
 
     // Constructor
@@ -20,39 +18,13 @@ public class Student  extends Person{
     void changeMajor(String newMajor)
     {
         this.major = newMajor;
-        System.out.println(name + " change major to " + newMajor);
+        System.out.println(getName() + " change major to " + newMajor);
     }
 
     // Getters 
-    public String getName()
-    {
-        return name;
-    }
-
-    public int getAge()
-    {
-        return age;
-    }
-
     public String getMajor()
     {
         return major;
-    }
-
-    // Setter wtih validation
-    public void  setAge(int age)
-    {
-        if(age > 0 && age <= 120)
-            this.age = age;
-        
-            else{
-                System.out.println("Invalid age. Age must be between 1 and 120.");
-            }
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
     }
 
     public void setMajor(String major)
@@ -64,5 +36,17 @@ public class Student  extends Person{
     {
         System.out.println("I am a student.");
     }
+
+    public void printID()
+    {
+        String name = getName();
+        if(name != null && name.length() >= 2)
+        {
+              System.out.println("Student Id: S-" + getName().substring(0,1).toUpperCase() + "001");
+        } else {
+            System.out.println("Student ID: UNKNOWN");
+        }
+    }
+
 }
 

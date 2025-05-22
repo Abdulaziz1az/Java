@@ -63,5 +63,14 @@ public class Main {
         }
         System.out.println("Total Students: " + studentCount);
         System.out.println("Total Teachers: " + teacherCount);
+
+        List<Indentifiable> ids = new ArrayList<>();
+        ids.add(new Student("Abdulaziz", 22, "CS"));
+        ids.add(new Teacher("Zara", 35, "Math"));
+
+        for (Indentifiable i : ids)
+        {
+            i.printID();
+        }
     }
 }

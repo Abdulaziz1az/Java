@@ -1,4 +1,4 @@
-public class Teacher extends Person{
+public class Teacher extends Person implements Indentifiable, Role{
     private String subject;
     
     public Teacher(String name, int age, String subject)
@@ -9,13 +9,20 @@ public class Teacher extends Person{
 
     public void displayInfo()
     {
-        super.displayInfo();
+        System.out.println("Name: "+ getName());
+        System.out.println("Age: " + getAge());
         System.out.println("Subject: " + subject);
         System.out.println();
     }
 
-      public void printRole()
+    public void printID()
+    {
+        System.out.println("Teacher ID: T-" + getName().substring(0,2).toUpperCase()+ "101");
+    }
+
+    public void printRole()
     {
         System.out.println("I am a teacher.");
     }
+
 }
